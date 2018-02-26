@@ -18,7 +18,7 @@ angular.module('mm.core.login', [])
 .constant('mmCoreLoginSiteCheckedEvent', 'mm_login_site_checked')
 .constant('mmCoreLoginSiteUncheckedEvent', 'mm_login_site_unchecked')
 
-.config(function($stateProvider, $urlRouterProvider, $mmInitDelegateProvider, mmInitDelegateMaxAddonPriority) {
+.config(function($stateProvider, $urlRouterProvider, $mmInitDelegateProvider, mmInitDelegateMaxAddonPriority, mmCoreConfigConstants) {
 
     $stateProvider
 
@@ -442,7 +442,8 @@ angular.module('mm.core.login', [])
                 disableAnimate: true,
                 disableBack: true
             });
-            $state.go('mm_login.sites');
+            //$state.go('mm_login.sites');
+            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
         });
     }
 });

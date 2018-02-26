@@ -38,7 +38,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
 .constant('mmCoreDownloadThreshold', 10485760) // 10MB.
 
 .config(function($stateProvider, $provide, $ionicConfigProvider, $httpProvider, $mmUtilProvider,
-        $mmLogProvider, $compileProvider, $mmInitDelegateProvider, mmInitDelegateMaxAddonPriority) {
+        $mmLogProvider, $compileProvider, $mmInitDelegateProvider, mmInitDelegateMaxAddonPriority, mmCoreConfigConstants) {
 
     // Set tabs to bottom on Android.
     $ionicConfigProvider.platform.android.tabs.position('bottom');
@@ -112,7 +112,8 @@ angular.module('mm.core', ['pascalprecht.translate'])
                             }
                         }, function() {
                             // Site doesn't exist.
-                            $state.go('mm_login.sites');
+                            //$state.go('mm_login.sites');
+                            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         });
                     }
                 }
@@ -137,7 +138,8 @@ angular.module('mm.core', ['pascalprecht.translate'])
                         if ($stateParams.siteid) {
                             loadSiteAndGo();
                         } else {
-                            $state.go('mm_login.sites');
+                            //$state.go('mm_login.sites');
+                            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         }
                     }
                 });
