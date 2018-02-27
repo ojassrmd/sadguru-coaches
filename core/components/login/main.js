@@ -406,11 +406,11 @@ angular.module('mm.core.login', [])
             return $mmLoginHelper.validateBrowserSSOLogin(url);
         }).then(function(data) {
             siteData = data;
-            console.log("statename="+siteData.statename);
+            $log.debug("statename="+siteData.statename);
             return $mmLoginHelper.handleSSOLoginAuthentication(siteData.siteurl, siteData.token, siteData.privateToken);
         }).then(function() {
             if (siteData.statename) {
-              console.log("appLaunchedByURL")
+              $log.debug("appLaunchedByURL"+siteData.stateParams);
                 // State defined, go to that state instead of site initial page.
                 $state.go(siteData.statename, siteData.stateparams);
             } else {

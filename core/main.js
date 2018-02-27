@@ -102,7 +102,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
                 $ionicHistory.nextViewOptions({disableBack: true});
 
                 function loadSiteAndGo() {
-                  console.log("loadSiteAndGo");
+
                     if ($stateParams.siteid == mmCoreNoSiteId) {
                         // No site to load, just go to the state.
                         $state.go($stateParams.state, $stateParams.params);
@@ -113,6 +113,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
                             }
                         }, function() {
                             // Site doesn't exist.
+                            $log.debug("loadSiteAndGo");
                             $state.go('mm_login.sites');
                             //$state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         });
