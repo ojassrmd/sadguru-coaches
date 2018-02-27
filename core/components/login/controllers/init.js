@@ -70,6 +70,7 @@ angular.module('mm.core.login')
         } else {
             $mmSitesManager.hasSites().then(function() {
                 //return $state.go('mm_login.sites');
+                console.log("loadCurrent");
                 $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
             }, function() {
                 return $mmLoginHelper.goToAddSite();
