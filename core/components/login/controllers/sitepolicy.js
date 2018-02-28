@@ -22,7 +22,7 @@ angular.module('mm.core.login')
  * @name mmLoginSitePolicyCtrl
  */
 .controller('mmLoginSitePolicyCtrl', function($scope, $state, $stateParams, $mmSitesManager, $mmSite, $mmUtil, $ionicHistory,
-            $mmLoginHelper, $mmWS, $q, $sce, $mmFS) {
+            $mmLoginHelper, $mmWS, $q, $sce, $mmFS, mmCoreConfigConstants) {
 
     var siteId = $stateParams.siteid || $mmSite.getId();
 
@@ -88,7 +88,8 @@ angular.module('mm.core.login')
                 disableAnimate: true,
                 disableBack: true
             });
-            $state.go('mm_login.sites');
+            //$state.go('mm_login.sites');
+            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
         });
     }
 
