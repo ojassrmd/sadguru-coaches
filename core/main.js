@@ -97,8 +97,8 @@ angular.module('mm.core', ['pascalprecht.translate'])
             cache: false,
             template: '<ion-view><ion-content mm-state-class><mm-loading class="mm-loading-center"></mm-loading></ion-content></ion-view>',
             controller: function($scope, $state, $stateParams, $mmSite, $mmSitesManager, $ionicHistory, $mmAddonManager, $mmApp,
-                        $mmLoginHelper, mmCoreNoSiteId) {
-
+                        $mmLoginHelper, mmCoreNoSiteId,$log) {
+                $log = $log.getInstance('mmCore');            
                 $ionicHistory.nextViewOptions({disableBack: true});
 
                 function loadSiteAndGo() {
@@ -114,14 +114,15 @@ angular.module('mm.core', ['pascalprecht.translate'])
                         }, function() {
                             // Site doesn't exist.
                             $log.debug("loadSiteAndGo");
-                            $state.go('mm_login.sites');
-                            //$state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
+                            //$state.go('mm_login.sites');
+                            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         });
                     }
                 }
 
                 $scope.$on('$ionicView.enter', function() {
                     if ($mmSite.isLoggedIn()) {
+                      $log.debug("logged in");
                         if ($stateParams.siteid && $stateParams.siteid != $mmSite.getId()) {
                             // Target state belongs to a different site. Change site.
                             if ($mmAddonManager.hasRemoteAddonsLoaded()) {
@@ -137,12 +138,12 @@ angular.module('mm.core', ['pascalprecht.translate'])
                             $state.go($stateParams.state, $stateParams.params);
                         }
                     } else {
-                      $log.debug($stateParams.siteid);
+                      $log.debug("siteid="+$stateParams.siteid);
                         if ($stateParams.siteid) {
                             loadSiteAndGo();
                         } else {
-                            $state.go('mm_login.sites');
-                            //$state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
+                            //$state.go('mm_login.sites');
+                            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         }
                     }
                 });
