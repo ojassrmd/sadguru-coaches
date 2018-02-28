@@ -137,11 +137,12 @@ angular.module('mm.core', ['pascalprecht.translate'])
                             $state.go($stateParams.state, $stateParams.params);
                         }
                     } else {
+                      $log.debug($stateParams.siteid);
                         if ($stateParams.siteid) {
                             loadSiteAndGo();
                         } else {
-                            //$state.go('mm_login.sites');
-                            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
+                            $state.go('mm_login.sites');
+                            //$state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         }
                     }
                 });
