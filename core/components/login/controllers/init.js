@@ -22,7 +22,7 @@ angular.module('mm.core.login')
  * @name mmLoginInitCtrl
  */
 .controller('mmLoginInitCtrl', function($log, $ionicHistory, $state, $mmSitesManager, $mmSite, $mmApp, $mmLoginHelper,
-            mmCoreNoSiteId, mmCoreConfigConstants, $log) {
+            mmCoreNoSiteId, mmCoreConfigConstants) {
 
     $log = $log.getInstance('mmLoginInitCtrl');
 
@@ -70,8 +70,7 @@ angular.module('mm.core.login')
         } else {
             $mmSitesManager.hasSites().then(function() {
                 //return $state.go('mm_login.sites');
-                $log.debug("loadCurrent");
-                return $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
+                $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
             }, function() {
                 return $mmLoginHelper.goToAddSite();
             });

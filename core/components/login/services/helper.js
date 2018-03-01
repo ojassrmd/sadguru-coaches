@@ -642,8 +642,7 @@ angular.module('mm.core.login')
             // Retrieve username.
             var info = $mmSite.getInfo();
             if (typeof info != 'undefined' && typeof info.username != 'undefined') {
-              $log.debug("handleSSOLoginAuthentication");
-;                return $mmSitesManager.updateSiteToken(info.siteurl, info.username, token, privateToken).then(function() {
+                return $mmSitesManager.updateSiteToken(info.siteurl, info.username, token, privateToken).then(function() {
                     $mmSitesManager.updateSiteInfoByUrl(info.siteurl, info.username);
                 }).catch(function() {
                     // Error updating token, return proper error message.

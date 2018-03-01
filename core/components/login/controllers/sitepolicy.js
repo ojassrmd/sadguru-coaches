@@ -22,7 +22,7 @@ angular.module('mm.core.login')
  * @name mmLoginSitePolicyCtrl
  */
 .controller('mmLoginSitePolicyCtrl', function($scope, $state, $stateParams, $mmSitesManager, $mmSite, $mmUtil, $ionicHistory,
-            $mmLoginHelper, $mmWS, $q, $sce, $mmFS, $mmCoreConfigConstants) {
+            $mmLoginHelper, $mmWS, $q, $sce, $mmFS, mmCoreConfigConstants) {
 
     var siteId = $stateParams.siteid || $mmSite.getId();
 

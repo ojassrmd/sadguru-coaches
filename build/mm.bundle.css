@@ -10841,7 +10841,7 @@ p.item-text-wrap {
   padding-left: 12px; }
   .mm-menu-selected:not(.button).item-avatar, .mm-menu-selected.item-media:not(.button), .item-media.mm-split-item-selected:not(.button), .item-media.item.mma-mod-lesson-selected:not(.button), .mm-grades-table .item-media.mma-mod-lesson-selected.itemcenter:not(.button), .mm-menu-selected.item-avatar-center:not(.button), .item-avatar-center.mm-split-item-selected:not(.button), .item-avatar-center.item.mma-mod-lesson-selected:not(.button), .mm-grades-table .item-avatar-center.mma-mod-lesson-selected.itemcenter:not(.button), .mm-split-item-selected:not(.button).item-avatar, .mm-split-item-selected.item-progress:not(.button), .mm-menu-selected.item-progress:not(.button), .item-progress.item.mma-mod-lesson-selected:not(.button), .mm-grades-table .item-progress.mma-mod-lesson-selected.itemcenter:not(.button), .item.mma-mod-lesson-selected:not(.button).item-avatar, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar, .mm-menu-selected:not(.button).item-avatar-left, .mm-split-item-selected:not(.button).item-avatar-left, .item.mma-mod-lesson-selected:not(.button).item-avatar-left, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar-left {
     padding-left: 68px; }
-    .mm-menu-selected:not(.button).item-avatar > img:first-child, .mm-menu-selected.item-media:not(.button) > img:first-child, .item-media.mm-split-item-selected:not(.button) > img:first-child, .item-media.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-media.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .mm-menu-selected.item-avatar-center:not(.button) > img:first-child, .item-avatar-center.mm-split-item-selected:not(.button) > img:first-child, .item-avatar-center.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-avatar-center.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .mm-split-item-selected:not(.button).item-avatar > img:first-child, .mm-split-item-selected.item-progress:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-media.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-avatar-center.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter.item-progress:not(.button) > img:first-child, .mm-menu-selected.item-progress:not(.button) > img:first-child, .item-progress.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-progress.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .item.mma-mod-lesson-selected:not(.button).item-avatar > img:first-child, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar > img:first-child, .mm-menu-selected:not(.button).item-avatar-left > img:first-child, .mm-split-item-selected:not(.button).item-avatar-left > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar-left > img:first-child, .item.mma-mod-lesson-selected:not(.button).item-avatar-left > img:first-child, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar-left > img:first-child {
+    .mm-menu-selected:not(.button).item-avatar > img:first-child, .mm-menu-selected.item-media:not(.button) > img:first-child, .item-media.mm-split-item-selected:not(.button) > img:first-child, .item-media.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-media.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .mm-menu-selected.item-avatar-center:not(.button) > img:first-child, .item-avatar-center.mm-split-item-selected:not(.button) > img:first-child, .item-avatar-center.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-avatar-center.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .mm-split-item-selected:not(.button).item-avatar > img:first-child, .mm-split-item-selected.item-progress:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-media.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-avatar-center.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-progress.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar > img:first-child, .mm-menu-selected.item-progress:not(.button) > img:first-child, .item-progress.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-progress.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .item.mma-mod-lesson-selected:not(.button).item-avatar > img:first-child, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar > img:first-child, .mm-menu-selected:not(.button).item-avatar-left > img:first-child, .mm-split-item-selected:not(.button).item-avatar-left > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar-left > img:first-child, .item.mma-mod-lesson-selected:not(.button).item-avatar-left > img:first-child, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar-left > img:first-child {
       left: 12px; }
 
 .user-with-avatar {
@@ -12578,153 +12578,6 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
 .padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
   margin-top: 0; }
 
-.mm-capture-media-modal {
-  background-color: #eeeeee; }
-  .mm-capture-media-modal .bar-header {
-    border-color: transparent;
-    background-color: #f98012;
-    background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
-    color: #ffffff; }
-    .mm-capture-media-modal .bar-header .title {
-      color: #ffffff; }
-    .mm-capture-media-modal .bar-header .button {
-      color: #ffffff;
-      font-weight: normal; }
-  .mm-capture-media-modal .mm-capture-media-modal-content {
-    text-align: center; }
-    .mm-capture-media-modal .mm-capture-media-modal-content .mm-av-wrapper {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: table;
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      clear: both; }
-    .mm-capture-media-modal .mm-capture-media-modal-content audio, .mm-capture-media-modal .mm-capture-media-modal-content video, .mm-capture-media-modal .mm-capture-media-modal-content img {
-      width: 100%;
-      height: 100%;
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      object-fit: contain; }
-      .mm-capture-media-modal .mm-capture-media-modal-content audio.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content video.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content img.mm-webcam-stream {
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1); }
-    .mm-capture-media-modal .mm-capture-media-modal-content .mm-webcam-image-canvas {
-      display: none; }
-    .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container {
-      width: 100%;
-      height: 100%; }
-      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-canvas {
-        width: 100%;
-        height: 100%; }
-      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-captured {
-        width: 100%; }
-  .mm-capture-media-modal .bar-footer {
-    background-color: #dddddd;
-    border-top-color: #9e9e9e; }
-    .mm-capture-media-modal .bar-footer .col, .mm-capture-media-modal .bar-footer .mm-data-contents td, .mm-data-contents .mm-capture-media-modal .bar-footer td, .mm-capture-media-modal .bar-footer .mm-data-contents th, .mm-data-contents .mm-capture-media-modal .bar-footer th {
-      padding: 0;
-      line-height: 34px; }
-      .mm-capture-media-modal .bar-footer .col .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents td .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer td .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents th .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer th .button-icon {
-        color: #3a3a3a; }
-      .mm-capture-media-modal .bar-footer .col .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-record, .mm-capture-media-modal .bar-footer .col .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-trash-a {
-        color: #cb3d4d; }
-
-.mm-fileuploader-file-handler input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none;
-  z-index: 100;
-  cursor: pointer; }
-
-/* - User grades table (most of it extracted from MM1)
--------------------------------------------------------------------------- */
-.mm-grades-container {
-  padding-right: 2px;
-  background: white; }
-
-.mm-grades-table {
-  border-collapse: collapse;
-  line-height: 20px;
-  width: 100%;
-  font-size: 16px;
-  color: #444; }
-  .mm-grades-table tr {
-    border-bottom: 1px solid #dddddd; }
-  .mm-grades-table th,
-  .mm-grades-table td {
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    vertical-align: top;
-    white-space: normal; }
-  .mm-grades-table thead th {
-    padding-left: 10px;
-    vertical-align: bottom;
-    font-weight: bold; }
-  .mm-grades-table tbody th {
-    font-weight: normal; }
-  .mm-grades-table .item, .mm-grades-table .itemcenter {
-    display: table-cell; }
-  .mm-grades-table th.b1b {
-    padding-left: 20px; }
-  .mm-grades-table th.item, .mm-grades-table th.itemcenter {
-    padding-left: 30px; }
-  .mm-grades-table th.baggt {
-    padding-left: 30px; }
-  .mm-grades-table th img {
-    margin-left: -20px;
-    float: left; }
-  .mm-grades-table .b1l {
-    width: 10px;
-    min-width: 10px; }
-  .mm-grades-table .b1t,
-  .mm-grades-table .baggt {
-    font-weight: bold; }
-  .mm-grades-table .itemcenter {
-    padding: 10px;
-    white-space: normal; }
-  .mm-grades-table .feedbacktext {
-    padding-left: 10px; }
-    .mm-grades-table .feedbacktext .no-overflow {
-      overflow: auto; }
-  .mm-grades-table .dimmed_text,
-  .mm-grades-table .hidden,
-  .mm-grades-table .hidden a {
-    color: #aaa; }
-  .mm-grades-table .oddd1,
-  .mm-grades-table .oddd3,
-  .mm-grades-table .evend3,
-  .mm-grades-table .levelodd {
-    background-color: #f5f5f5; }
-  .mm-grades-table .oddd2,
-  .mm-grades-table .evend2,
-  .mm-grades-table .oddd4,
-  .mm-grades-table .evend4 {
-    background-color: #f5f5f5; }
-  .mm-grades-table .leveleven {
-    background-color: #fff; }
-  .mm-grades-table .column-leader {
-    border-left: 1px solid #dddddd;
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd; }
-    .mm-grades-table .column-leader.level1 {
-      border-left: 0; }
-  .mm-grades-table .column-itemname {
-    border-right: 1px solid #dddddd;
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd; }
-
 .item-course > .icon, .item-course > ion-spinner {
   height: 40px;
   width: 40px;
@@ -13050,6 +12903,153 @@ mm-course-list-item div.item-icon-left.earlysubmission {
   max-width: 20px;
   max-height: 34px; }
 
+.mm-capture-media-modal {
+  background-color: #eeeeee; }
+  .mm-capture-media-modal .bar-header {
+    border-color: transparent;
+    background-color: #f98012;
+    background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
+    color: #ffffff; }
+    .mm-capture-media-modal .bar-header .title {
+      color: #ffffff; }
+    .mm-capture-media-modal .bar-header .button {
+      color: #ffffff;
+      font-weight: normal; }
+  .mm-capture-media-modal .mm-capture-media-modal-content {
+    text-align: center; }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-av-wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: table;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      clear: both; }
+    .mm-capture-media-modal .mm-capture-media-modal-content audio, .mm-capture-media-modal .mm-capture-media-modal-content video, .mm-capture-media-modal .mm-capture-media-modal-content img {
+      width: 100%;
+      height: 100%;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      object-fit: contain; }
+      .mm-capture-media-modal .mm-capture-media-modal-content audio.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content video.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content img.mm-webcam-stream {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1); }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-webcam-image-canvas {
+      display: none; }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container {
+      width: 100%;
+      height: 100%; }
+      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-canvas {
+        width: 100%;
+        height: 100%; }
+      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-captured {
+        width: 100%; }
+  .mm-capture-media-modal .bar-footer {
+    background-color: #dddddd;
+    border-top-color: #9e9e9e; }
+    .mm-capture-media-modal .bar-footer .col, .mm-capture-media-modal .bar-footer .mm-data-contents td, .mm-data-contents .mm-capture-media-modal .bar-footer td, .mm-capture-media-modal .bar-footer .mm-data-contents th, .mm-data-contents .mm-capture-media-modal .bar-footer th {
+      padding: 0;
+      line-height: 34px; }
+      .mm-capture-media-modal .bar-footer .col .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents td .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer td .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents th .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer th .button-icon {
+        color: #3a3a3a; }
+      .mm-capture-media-modal .bar-footer .col .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-record, .mm-capture-media-modal .bar-footer .col .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-trash-a {
+        color: #cb3d4d; }
+
+.mm-fileuploader-file-handler input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none;
+  z-index: 100;
+  cursor: pointer; }
+
+/* - User grades table (most of it extracted from MM1)
+-------------------------------------------------------------------------- */
+.mm-grades-container {
+  padding-right: 2px;
+  background: white; }
+
+.mm-grades-table {
+  border-collapse: collapse;
+  line-height: 20px;
+  width: 100%;
+  font-size: 16px;
+  color: #444; }
+  .mm-grades-table tr {
+    border-bottom: 1px solid #dddddd; }
+  .mm-grades-table th,
+  .mm-grades-table td {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+    white-space: normal; }
+  .mm-grades-table thead th {
+    padding-left: 10px;
+    vertical-align: bottom;
+    font-weight: bold; }
+  .mm-grades-table tbody th {
+    font-weight: normal; }
+  .mm-grades-table .item, .mm-grades-table .itemcenter {
+    display: table-cell; }
+  .mm-grades-table th.b1b {
+    padding-left: 20px; }
+  .mm-grades-table th.item, .mm-grades-table th.itemcenter {
+    padding-left: 30px; }
+  .mm-grades-table th.baggt {
+    padding-left: 30px; }
+  .mm-grades-table th img {
+    margin-left: -20px;
+    float: left; }
+  .mm-grades-table .b1l {
+    width: 10px;
+    min-width: 10px; }
+  .mm-grades-table .b1t,
+  .mm-grades-table .baggt {
+    font-weight: bold; }
+  .mm-grades-table .itemcenter {
+    padding: 10px;
+    white-space: normal; }
+  .mm-grades-table .feedbacktext {
+    padding-left: 10px; }
+    .mm-grades-table .feedbacktext .no-overflow {
+      overflow: auto; }
+  .mm-grades-table .dimmed_text,
+  .mm-grades-table .hidden,
+  .mm-grades-table .hidden a {
+    color: #aaa; }
+  .mm-grades-table .oddd1,
+  .mm-grades-table .oddd3,
+  .mm-grades-table .evend3,
+  .mm-grades-table .levelodd {
+    background-color: #f5f5f5; }
+  .mm-grades-table .oddd2,
+  .mm-grades-table .evend2,
+  .mm-grades-table .oddd4,
+  .mm-grades-table .evend4 {
+    background-color: #f5f5f5; }
+  .mm-grades-table .leveleven {
+    background-color: #fff; }
+  .mm-grades-table .column-leader {
+    border-left: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd; }
+    .mm-grades-table .column-leader.level1 {
+      border-left: 0; }
+  .mm-grades-table .column-itemname {
+    border-right: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd; }
+
 .mm-mm_login_sites .item-thumbnail-left .item-content {
   padding-top: 16px;
   padding-right: 16px; }
@@ -13232,15 +13232,6 @@ li.mm-question-answer-incorrect,
 .questioncorrectnessicon {
   font-size: 20px; }
 
-.foreground-ion-edit.ion-edit:before {
-  position: relative;
-  left: 120px;
-  bottom: 15px;
-  font-size: 24px; }
-
-.mm-site_mm_user-profile .mm-tab-handlers {
-  padding-bottom: 16px; }
-
 #mm-settings-languagelabel {
   color: #3a3a3a; }
 
@@ -13295,6 +13286,15 @@ ion-side-menu li.itemcenter {
 
 ion-side-menu li.item.item-divider, ion-side-menu .mm-grades-table li.item-divider.itemcenter, .mm-grades-table ion-side-menu li.item-divider.itemcenter {
   background-color: #f5f5f5; }
+
+.foreground-ion-edit.ion-edit:before {
+  position: relative;
+  left: 120px;
+  bottom: 15px;
+  font-size: 24px; }
+
+.mm-site_mm_user-profile .mm-tab-handlers {
+  padding-bottom: 16px; }
 
 .mm-site_frontpage .mma-frontpage-item-container .item-media {
   min-height: 55px;

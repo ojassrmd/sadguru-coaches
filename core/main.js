@@ -38,7 +38,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
 .constant('mmCoreDownloadThreshold', 10485760) // 10MB.
 
 .config(function($stateProvider, $provide, $ionicConfigProvider, $httpProvider, $mmUtilProvider,
-        $mmLogProvider, $compileProvider, $mmInitDelegateProvider, mmInitDelegateMaxAddonPriority, mmCoreConfigConstants) {
+        $mmLogProvider, $compileProvider, $mmInitDelegateProvider, mmInitDelegateMaxAddonPriority) {
 
     // Set tabs to bottom on Android.
     $ionicConfigProvider.platform.android.tabs.position('bottom');
@@ -97,12 +97,11 @@ angular.module('mm.core', ['pascalprecht.translate'])
             cache: false,
             template: '<ion-view><ion-content mm-state-class><mm-loading class="mm-loading-center"></mm-loading></ion-content></ion-view>',
             controller: function($scope, $state, $stateParams, $mmSite, $mmSitesManager, $ionicHistory, $mmAddonManager, $mmApp,
-                        $mmLoginHelper, mmCoreNoSiteId,$log) {
-                $log = $log.getInstance('mmCore');            
+                        $mmLoginHelper, mmCoreNoSiteId, mmCoreConfigConstants) {
+
                 $ionicHistory.nextViewOptions({disableBack: true});
 
                 function loadSiteAndGo() {
-
                     if ($stateParams.siteid == mmCoreNoSiteId) {
                         // No site to load, just go to the state.
                         $state.go($stateParams.state, $stateParams.params);
@@ -113,7 +112,6 @@ angular.module('mm.core', ['pascalprecht.translate'])
                             }
                         }, function() {
                             // Site doesn't exist.
-                            $log.debug("loadSiteAndGo");
                             //$state.go('mm_login.sites');
                             $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         });
@@ -122,7 +120,6 @@ angular.module('mm.core', ['pascalprecht.translate'])
 
                 $scope.$on('$ionicView.enter', function() {
                     if ($mmSite.isLoggedIn()) {
-                      $log.debug("logged in");
                         if ($stateParams.siteid && $stateParams.siteid != $mmSite.getId()) {
                             // Target state belongs to a different site. Change site.
                             if ($mmAddonManager.hasRemoteAddonsLoaded()) {
@@ -138,7 +135,6 @@ angular.module('mm.core', ['pascalprecht.translate'])
                             $state.go($stateParams.state, $stateParams.params);
                         }
                     } else {
-                      $log.debug("siteid="+$stateParams.siteid);
                         if ($stateParams.siteid) {
                             loadSiteAndGo();
                         } else {
