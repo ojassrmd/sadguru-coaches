@@ -22,7 +22,7 @@ angular.module('mm.core.login')
  * @name mmLoginReconnectCtrl
  */
 .controller('mmLoginReconnectCtrl', function($scope, $state, $stateParams, $mmSitesManager, $mmApp, $mmUtil, $ionicHistory,
-            $mmLoginHelper, $mmSite) {
+            $mmLoginHelper, $mmSite, mmCoreConfigConstants) {
 
     var infositeurl = $stateParams.infositeurl, // Siteurl in site info. It might be different than siteurl (http/https).
         stateName = $stateParams.statename,
@@ -66,7 +66,8 @@ angular.module('mm.core.login')
                 disableAnimate: true,
                 disableBack: true
             });
-            $state.go('mm_login.sites');
+            //$state.go('mm_login.sites');
+            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
         });
     };
 
