@@ -7,6 +7,7 @@
     "coursecompetencyratingsarepushedtouserplans": "Рейтинги компетенций из этого курса сразу же обновляются в учебных планах.",
     "crossreferencedcompetencies": "Перекрестные компетенции",
     "duedate": "Последний срок сдачи",
+    "errornocompetenciesfound": "Компетенций не найдено",
     "evidence": "Доказательство",
     "evidence_competencyrule": "Выполнены требования правила компетенции.",
     "evidence_coursecompleted": "Курс «{{$a}}» завершен.",

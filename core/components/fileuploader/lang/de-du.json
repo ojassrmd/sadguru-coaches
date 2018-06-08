@@ -12,7 +12,7 @@
     "errornoapp": "Keine App zum Ausführen dieser Aktion gefunden",
     "errorreadingfile": "Fehler beim Lesen der Datei \"{{$a}}\"",
     "errorwhileuploading": "Fehler beim Hochladen der Datei",
-    "file": "Datei",
+    "file": "Dateiabgabe",
     "filesofthesetypes": "Folgende Dateitypen können als Abgabe hinzugefügt werden:",
     "fileuploaded": "Datei hochgeladen",
     "invalidfiletype": "Dateityp {{$a}} wird nicht akzeptiert",

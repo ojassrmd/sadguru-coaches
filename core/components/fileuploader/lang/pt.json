@@ -12,7 +12,7 @@
     "errornoapp": "Não possui a aplicação móvel necessária para executar esta ação.",
     "errorreadingfile": "Erro na leitura do ficheiro \"{{$a}}\"",
     "errorwhileuploading": "Ocorreu um erro durante o carregamento do ficheiro.",
-    "file": "Ficheiro",
+    "file": "Submissão de ficheiros",
     "filesofthesetypes": "Podem ser adicionados à submissão os seguintes tipos de ficheiros:",
     "fileuploaded": "Ficheiro carregado com sucesso",
     "invalidfiletype": "O tipo de ficheiro \"{{$a}}\" não é permitido.",

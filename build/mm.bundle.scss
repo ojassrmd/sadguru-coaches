@@ -1813,12 +1813,26 @@ ol.list-with-style, ul.list-with-style {
   padding-bottom: 0;
 }
 
-.text-success {
+.text-success, p.text-success, .item p.text-success {
   color: $mm-success-color;
 }
 
-.text-danger {
+.text-danger, p.text-danger, .item p.text-danger {
   color: $mm-error-color;
+}
+
+// ReCaptcha modal.
+.mm-recaptcha-modal {
+    background-color: $gray-light;
+
+    .bar-header {
+        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
+
+        .button {
+            color: $bar-content-text;
+            font-weight: normal;
+        }
+    }
 }
 
 .atto_image_preview {
@@ -2260,6 +2274,146 @@ mm-course-mod-description .card .item {
   margin-top: 0;
 }
 
+$chart-size: 70px;
+$doughnut-border-size: 15px;
+$doughnut-dasharray: 173;
+$doughnut-empty-colour: $gray-light;
+$doughnut-fill-colour: $mm-color-light;
+$doughnut-border-colour:  $gray-dark;
+$doughnut-text-colour: $gray-darker;
+
+.item-course {
+  >.icon, >ion-spinner {
+    height: 32px + ($item-padding /2);
+    width: 32px + ($item-padding /2);
+    right: 0;
+    top: 6px;
+    color: $doughnut-text-colour;
+    position: absolute;
+  }
+
+  &.item-progress .mm-course-download-spinner {
+    top: 46px;
+  }
+
+  &:not(.item-progress) {
+    padding-right: 80px;
+
+    .mm-course-download-spinner {
+      right: 40px;
+    }
+  }
+}
+
+.item-progress {
+  @extend .item-avatar;
+  padding-left: $chart-size + ($item-padding * 2);
+  min-height: $chart-size + ($item-padding * 2);
+  >.progress-chart-container {
+    max-width: $chart-size;
+    max-height: $chart-size;
+    position: absolute;
+    top: $item-padding;
+    left: $item-padding;
+  }
+  h2 {
+    font-size: 21px;
+  }
+}
+
+.progress-chart-container {
+  height: $chart-size;
+  width: $chart-size;
+
+  .progress-doughnut {
+    position: relative;
+    height: $chart-size;
+    width: $chart-size;
+    background-clip: padding-box;
+    border: $doughnut-border-size solid $doughnut-empty-colour;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: table;
+
+    .progress-text {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      color: $doughnut-text-colour;
+      font-size: 95%;
+      letter-spacing: -1px;
+    }
+
+    .progress-indicator {
+      position: absolute;
+      top: ($doughnut-border-size * -1);
+      left: ($doughnut-border-size * -1);
+      height: $chart-size;
+      width: $chart-size;
+
+      svg {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .circle {
+          stroke-width: $doughnut-border-size;
+          stroke: $doughnut-fill-colour;
+          fill: none;
+          stroke-dasharray: $doughnut-dasharray;
+          stroke-dashoffset: $doughnut-dasharray;
+          transform: rotate(-90deg);
+          transform-origin: center center;
+
+          @for $i from 1 through 100 {
+              &.percent-#{$i} {
+                  stroke-dashoffset: $doughnut-dasharray - ($i / 100 * $doughnut-dasharray);
+              }
+          }
+        }
+      }
+    }
+  }
+
+  .no-progress {
+    height: $chart-size;
+    width: $chart-size;
+    background-color: $doughnut-empty-colour;
+    border-radius: 50%;
+    position: relative;
+    border: 0.5px solid $doughnut-border-colour;
+
+    .icon {
+      position: absolute;
+      text-align: center;
+      /*rtl:ignore*/
+      left: -1px;
+      top: -1px;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      color: $white;
+      height: $chart-size;
+      width: $chart-size;
+      line-height: $chart-size;
+      font-size: ($chart-size / 2) + 10px;
+      &:before {
+        width: $chart-size;
+      }
+    }
+  }
+}
+
+.mm-site_mm_coursescategories .item-icon-left,
+mm-course-list-item .item-icon-left {
+  color: $black;
+}
+
+.mm-course-enrollment-img {
+  max-width: 20px;
+  max-height: 34px;
+}
+
 .mm-capture-media-modal {
     background-color: $gray-light;
 
@@ -2459,134 +2613,6 @@ mm-course-mod-description .card .item {
     border-top: 1px solid $item-light-border;
     border-bottom: 1px solid $item-light-border;
   }
-}
-
-$chart-size: 70px;
-$doughnut-border-size: 15px;
-$doughnut-dasharray: 173;
-$doughnut-empty-colour: $gray-light;
-$doughnut-fill-colour: $mm-color-light;
-$doughnut-border-colour:  $gray-dark;
-$doughnut-text-colour: $gray-darker;
-
-.item-course {
-  >.icon, >ion-spinner {
-    height: 32px + ($item-padding /2);
-    width: 32px + ($item-padding /2);
-    right: 0;
-    top: 6px;
-    color: $doughnut-text-colour;
-    position: absolute;
-  }
-}
-
-.item-progress {
-  @extend .item-avatar;
-  padding-left: $chart-size + ($item-padding * 2);
-  min-height: $chart-size + ($item-padding * 2);
-  >.progress-chart-container {
-    max-width: $chart-size;
-    max-height: $chart-size;
-    position: absolute;
-    top: $item-padding;
-    left: $item-padding;
-  }
-  h2 {
-    font-size: 21px;
-  }
-}
-
-.progress-chart-container {
-  height: $chart-size;
-  width: $chart-size;
-
-  .progress-doughnut {
-    position: relative;
-    height: $chart-size;
-    width: $chart-size;
-    background-clip: padding-box;
-    border: $doughnut-border-size solid $doughnut-empty-colour;
-    border-radius: 50%;
-    box-sizing: border-box;
-    display: table;
-
-    .progress-text {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      color: $doughnut-text-colour;
-      font-size: 95%;
-      letter-spacing: -1px;
-    }
-
-    .progress-indicator {
-      position: absolute;
-      top: ($doughnut-border-size * -1);
-      left: ($doughnut-border-size * -1);
-      height: $chart-size;
-      width: $chart-size;
-
-      svg {
-        position: relative;
-        height: 100%;
-        width: 100%;
-
-        .circle {
-          stroke-width: $doughnut-border-size;
-          stroke: $doughnut-fill-colour;
-          fill: none;
-          stroke-dasharray: $doughnut-dasharray;
-          stroke-dashoffset: $doughnut-dasharray;
-          transform: rotate(-90deg);
-          transform-origin: center center;
-
-          @for $i from 1 through 100 {
-              &.percent-#{$i} {
-                  stroke-dashoffset: $doughnut-dasharray - ($i / 100 * $doughnut-dasharray);
-              }
-          }
-        }
-      }
-    }
-  }
-
-  .no-progress {
-    height: $chart-size;
-    width: $chart-size;
-    background-color: $doughnut-empty-colour;
-    border-radius: 50%;
-    position: relative;
-    border: 0.5px solid $doughnut-border-colour;
-
-    .icon {
-      position: absolute;
-      text-align: center;
-      /*rtl:ignore*/
-      left: -1px;
-      top: -1px;
-      right: 0;
-      bottom: 0;
-      margin: 0;
-      color: $white;
-      height: $chart-size;
-      width: $chart-size;
-      line-height: $chart-size;
-      font-size: ($chart-size / 2) + 10px;
-      &:before {
-        width: $chart-size;
-      }
-    }
-  }
-}
-
-.mm-site_mm_coursescategories .item-icon-left,
-mm-course-list-item .item-icon-left {
-  color: $black;
-}
-
-.mm-course-enrollment-img {
-  max-width: 20px;
-  max-height: 34px;
 }
 
 
@@ -2798,17 +2824,6 @@ li.mm-question-answer-incorrect,
 .questioncorrectnessicon {
   font-size: 20px;
 }
-
-.foreground-ion-edit.ion-edit:before {
-    position: relative;
-    left: 120px;
-    bottom: 15px;
-    font-size: 24px;
-}
-
-.mm-site_mm_user-profile .mm-tab-handlers {
-    padding-bottom: 16px;
-}
 #mm-settings-languagelabel {
   color: $base-color;
 }
@@ -2855,6 +2870,18 @@ ion-side-menu li.item {
 ion-side-menu li.item.item-divider {
   background-color: $bar-side-menu-item-divider-color;
 }
+
+.foreground-ion-edit.ion-edit:before {
+    position: relative;
+    left: 120px;
+    bottom: 15px;
+    font-size: 24px;
+}
+
+.mm-site_mm_user-profile .mm-tab-handlers {
+    padding-bottom: 16px;
+}
+
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
         min-height: 55px;
@@ -2885,7 +2912,6 @@ ion-side-menu li.item.item-divider {
 .mm-site_coursesgrades .item .badge {
   right: 16px;
 }
-
 $mma-messages-date-badge: "stable" !default;
 
 // The date displayed in the list.
@@ -3959,6 +3985,19 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 .mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
 	font-weight: bold;
 	font-size: 16px;
+}
+
+// Style match content a bit.
+.mma-qtype-calculated-container .item-select {
+  select,
+  .mm-select-fix {
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+  }
 }
 
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.

@@ -1246,20 +1246,24 @@ angular.module('mm.core')
 
             var count = 0,
                 failed = false,
+                error,
                 deferred = $q.defer();
 
             angular.forEach(promises, function(promise) {
-                promise.catch(function() {
+                promise.catch(function(err) {
                     failed = true;
+                    error = err;
                 }).finally(function() {
                     count++;
 
                     if (count === promises.length) {
                         // All promises have finished, reject/resolve.
                         if (failed) {
-                            deferred.reject();
+                            deferred.reject(error);
                         } else {
-                            deferred.resolve();
+                            // All the promises have been resolved, $q.all should finish immediately and send back the result
+                            // of all the promises.
+                            deferred.resolve($q.all(promises));
                         }
                     }
                 });
@@ -1416,9 +1420,10 @@ angular.module('mm.core')
          *                                      Default: 'mm.course.confirmdownloadunknownsize'.
          * @param {Number} [wifiThreshold]      Threshold to show confirm in WiFi connection. Default: mmCoreWifiDownloadThreshold.
          * @param {Number} [limitedThreshold]   Threshold to show confirm in limited connection. Default: mmCoreDownloadThreshold.
+         * @param  {Boolean} [alwaysConfirm]    True to show a confirm even if the size isn't high, false otherwise.
          * @return {Promise}                   Promise resolved when the user confirms or if no confirm needed.
          */
-        self.confirmDownloadSize = function(sizeCalc, message, unknownsizemessage, wifiThreshold, limitedThreshold) {
+        self.confirmDownloadSize = function(sizeCalc, message, unknownsizemessage, wifiThreshold, limitedThreshold, alwaysConfirm) {
             wifiThreshold = typeof wifiThreshold == 'undefined' ? mmCoreWifiDownloadThreshold : wifiThreshold;
             limitedThreshold = typeof limitedThreshold == 'undefined' ? mmCoreDownloadThreshold : limitedThreshold;
 
@@ -1439,6 +1444,8 @@ angular.module('mm.core')
                 message = message || 'mm.course.confirmdownload';
                 var readableSize = $mmText.bytesToSize(sizeCalc.size, 2);
                 return self.showConfirm($translate(message, {size: readableSize}));
+            } else if (alwaysConfirm) {
+                return self.showConfirm($translate('mm.core.areyousure'));
             }
             return $q.when();
         };

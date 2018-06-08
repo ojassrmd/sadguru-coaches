@@ -97,7 +97,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
             cache: false,
             template: '<ion-view><ion-content mm-state-class><mm-loading class="mm-loading-center"></mm-loading></ion-content></ion-view>',
             controller: function($scope, $state, $stateParams, $mmSite, $mmSitesManager, $ionicHistory, $mmAddonManager, $mmApp,
-                        $mmLoginHelper, mmCoreNoSiteId) {
+                        $mmLoginHelper, mmCoreNoSiteId, mmCoreConfigConstants) {
 
                 $ionicHistory.nextViewOptions({disableBack: true});
 
@@ -112,7 +112,8 @@ angular.module('mm.core', ['pascalprecht.translate'])
                             }
                         }, function() {
                             // Site doesn't exist.
-                            $state.go('mm_login.sites');
+                            //$state.go('mm_login.sites');
+                            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         });
                     }
                 }
@@ -137,7 +138,8 @@ angular.module('mm.core', ['pascalprecht.translate'])
                         if ($stateParams.siteid) {
                             loadSiteAndGo();
                         } else {
-                            $state.go('mm_login.sites');
+                            //$state.go('mm_login.sites');
+                            $state.go('mm_login.credentials', {siteurl: mmCoreConfigConstants.siteurl});
                         }
                     }
                 });

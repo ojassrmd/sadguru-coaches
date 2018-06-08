@@ -1,6 +1,8 @@
 {
     "allparticipants": "Alla deltagare",
     "android": "Android",
+    "answer": "Svar",
+    "answered": "Besvarad/e",
     "areyousure": "Är du säker?",
     "back": "Tillbaka",
     "cancel": "Avbryt",
@@ -68,6 +70,7 @@
     "labelsep": ":",
     "lastmodified": "Senast modifierad",
     "lastsync": "Senaste synkronisering",
+    "list": "Visa lista",
     "listsep": ";",
     "loading": "Laddar....",
     "lostconnection": "Vi förlorade anslutningen. Du måste  ansluta igen. Din token är nu ogiltigt.",
