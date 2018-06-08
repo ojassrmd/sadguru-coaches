@@ -9999,7 +9999,7 @@ angular.module('mm.core')
                 iframe.on('load', function() {
                     scope.loading = false;
                     scope.loaded && scope.loaded();
-                    $timeout(); 
+                    $timeout();
                 });
                 iframe.on('error', function() {
                     scope.loading = false;
@@ -71630,7 +71630,7 @@ angular.module('mm.core')
     "appname": "Sadguru Coaches",
     "desktopappname": "Sadguru Coaches",
     "versioncode" : "1",
-    "versionname" : "1.0.0",
+    "versionname" : "1.0.2",
     "cache_expiration_time" : 300000,
     "default_lang" : "en",
     "languages": {"ar": "عربي", "bg": "Български", "ca": "Català", "cs": "Čeština", "da": "Dansk", "de": "Deutsch", "de-du": "Deutsch - Du", "el": "Ελληνικά", "en": "English", "es": "Español", "es-mx": "Español - México", "eu": "Euskara", "fa": "فارسی", "fi": "Suomi", "fr" : "Français", "he" : "עברית", "hu": "magyar", "it": "Italiano", "ja": "日本語", "ko" : "한국어", "lt" : "Lietuvių", "mr": "मराठी", "nl": "Nederlands", "pl": "Polski", "pt-br": "Português - Brasil", "pt": "Português - Portugal", "ro": "Română", "ru": "Русский", "sr-cr": "Српски", "sr-lt": "Srpski", "sv": "Svenska", "tr" : "Türkçe", "uk" : "Українська", "zh-cn" : "简体中文", "zh-tw" : "正體中文"},
